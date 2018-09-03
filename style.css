@@ -1,6 +1,6 @@
 /*
-.b = разбивка
-.c = по центру
+.break = разбивка
+.centered = по центру
 */
 
 
@@ -22,13 +22,13 @@ p, ul, ol {
 /* basics */
 
 
-.b {
+.break {
   font-size: xx-large;
   line-height: .875;
   text-shadow: 0 0 2px #667;
   text-align: center;
 }
-.c{
+.centered{
   text-align: center;
 }
 
