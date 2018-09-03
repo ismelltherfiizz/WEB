@@ -39,6 +39,7 @@ ecently, I stumbled across a quote from a Mozilla developer <a href="">about the
 
 <blockquote>
 <p>Implementations and specifications have to do a delicate dance together. You don&#8217;t want implementations to happen before the specification is finished, because people start depending on the details of implementations and that constrains the specification. However, you also don&#8217;t want the specification to be finished before there are implementations and author experience with those implementations, because you need the feedback. There is unavoidable tension here, but we just have to muddle on through.
+</blockquote>
 
 <p>Keep this quote in the back of your mind, and let me explain how HTML5 came to be.
 <p class=c><img src=openclipart.org_johnny_automatic_animals_on_see_saw.png width=526 height=116 alt="animals on a seesaw">
@@ -76,7 +77,7 @@ ecently, I stumbled across a quote from a Mozilla developer <a href="">about the
 
 <p><i>(There are a number of typographical errors in the following quotes. I have decided to leave them intact for historical accuracy.)</i>
 
-<p>On February 25, 1993, <a href=""><cite>Marc Andreessen</cite> wrote</a>:
+<p>On February 25, 1993, <a href="">Marc Andreessen wrote</a>:
 
   <p>I'd like to propose a new, optional HTML tag:
   <p>IMG
@@ -96,9 +97,9 @@ ecently, I stumbled across a quote from a Mozilla developer <a href="">about the
 
   <p>“MIME, someday, maybe” is a reference to <a href="">content negotiation</a>, a feature of HTTP where a client (like a web browser) tells the server (like a web server) what types of resources it supports (like <code>image/jpeg</code>) so the server can return something in the client’s preferred format. <a href="">The Original HTTP as defined in 1991</a> (the only version that was implemented in February 1993) did not have a way for clients to tell servers what kinds of images they supported, thus the design dilemma that Marc faced.
 
-  <p>A few hours later, <a href=""><cite>Tony Johnson</cite> replied</a>:
+  <p>A few hours later, <a href="">Tony Johnson replied</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>I have something very similar in Midas 2.0 (in use here at SLAC, and due for public release any week now), except that all the names are different, and it has an extra argument <code>NAME="name"</code>. It has almost exactly the same functionality as your proposed <code>IMG</code> tag. e.g.
   <p><code>&lt;ICON name="NoEntry" href="http://note/foo/bar/NoEntry.xbm"&gt;</code>
   <p>The idea of the name parameter was to allow the browser to have a set of “built in” images. If the name matches a “built in” image it would use that instead of having to go out and fetch the image. The name could also act as a hint for “line mode” browsers as to what kind of a symbol to put in place of the image.
@@ -126,23 +127,23 @@ ecently, I stumbled across a quote from a Mozilla developer <a href="">about the
 
 <p>This proposal was never implemented, although the idea of providing text if an image is missing is <a href="">an important accessibility technique</a> that was missing from Marc’s initial <code>&lt;IMG&gt;</code> proposal. Years later, this feature was bolted on as the <a href=""><code>&lt;img alt&gt;</code> attribute</a>, which Netscape promptly broke by <a href="">erroneously treating it as a tooltip</a>.
 
-<p>A few hours after Tony posted his message, <a href=""><cite>Tim Berners-Lee</cite> responded</a>:
+<p>A few hours after Tony posted his message, <a href="">Tim Berners-Lee responded</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>I had imagined that figues would be reprented as
 <p><code>&lt;a name=fig1 href="fghjkdfghj" REL="EMBED, PRESENT"&gt;Figure &lt;/a&gt;</code>
 <p>where the relation ship values mean
-<pre>EMBED	 Embed this here when presenting it
-PRESENT	 Present this whenever the source document is presented</pre>
+<pre>EMBED   Embed this here when presenting it
+PRESENT   Present this whenever the source document is presented</pre>
 <p>Note that you can have various combinations of these, and if the browser doesn’t support either one, it doesn’t break.
 <p>[I] see that using this as a method for selectable icons means nesting anchors. Hmmm. But I hadn’t wanted a special tag.
 </blockquote>
 
 <p>This proposal was never implemented, but the <code>rel</code> attribute is <a href="">still around</a>.
 
-<p><a href=""><cite>Jim Davis</cite> added</a>:
+<p><a href="">Jim Davis added</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>It would be nice if there was a way to specify the content type, e.g.
 <p><code>&lt;IMG HREF="http://nsa.gov/pub/sounds/gorby.au" CONTENT-TYPE=audio/basic&gt;</code>
 <p>But I am completely willing to live with the requirement that I specify the content type by file extension.
@@ -150,21 +151,21 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
 <p>This proposal was never implemented, but Netscape did later add support for embedding of media objects with the <code>&lt;embed&gt;</code> element.
 
-<p><a href=""><cite>Jay C. Weber</cite> asked</a>:
+<p><a href="">Jay C. Weber asked</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>While images are at the top of my list of desired medium types in a WWW browser, I don’t think we should add idiosyncratic hooks for media one at a time. Whatever happened to the enthusiasm for using the MIME typing mechanism?
 </blockquote>
 
-<p><a href=""><cite>Marc Andreessen</cite> replied</a>:
+<p><a href="">Marc Andreessen replied</a>:
    88
-<blockquote cite="">
+<blockquote>
 <p>This isn’t a substitute for the upcoming use of MIME as a standard document mechanism; this provides a necessary and simple implementation of functionality that’s needed independently from MIME.
 </blockquote>
 
-<p><a href=""><cite>Jay C. Weber</cite> responded</a>:
+<p><a href=""> responded</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>Let’s temporarily forget about MIME, if it clouds the issue. My objection was to the discussion of “how are we going to support embedded images” rather than “how are we going to support embedded objections in various media”.
 <p>Otherwise, next week someone is going to suggest ‘lets put in a new tag <code>&lt;AUD SRC="file://foobar.com/foo/bar/blargh.snd"&gt;</code>‘ for audio.
 <p>There shouldn’t be much cost in going with something that generalizes.
@@ -172,9 +173,9 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
 <p>With the benefit of hindsight, it appears that Jay’s concerns were well founded. It took a little more than a week, but HTML5 did finally add new <a href=""><code>&lt;video&gt;</code></a> and <a href=""><code>&lt;audio&gt;</code></a> elements.
 
-<p>Responding to Jay’s original message, <a href=""><cite>Dave Raggett</cite> said</a>:
+<p>Responding to Jay’s original message, <a href="">Dave Raggett said</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>True indeed! I want to consider a whole range of possible image/line art types, along with the possibility of format negotiation. Tim’s note on supporting clickable areas within images is also important.
 </blockquote>
 
@@ -186,7 +187,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
 <p>Getting back to 1993, <a href="">Marc replied to Dave</a>:
 
-<blockquote cite="">
+<blockquote>
 <p>Actually, maybe we should think about a general-purpose procedural graphics language within which we can embed arbitrary hyperlinks attached to icons, images, or text, or anything. Has anyone else seen Intermedia’s capabilities wrt this?
 </blockquote>
 
@@ -194,17 +195,17 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
 <p>The idea of a “general-purpose procedural graphics language” did eventually catch on. Modern browsers support both <a href="">SVG</a> (declarative markup with embedded scripting) and <a href=""><code>&lt;canvas&gt;</code></a> (a procedural direct-mode graphics API), although the latter <a href="h">started as a proprietary extension</a> before being “retro-specced” by the <a href="">WHATWG</a>.
 
-<p><a href=""><cite>Bill Janssen</cite> replied</a>:
+<p><a href="">Bill Janssen replied</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>Other systems to look at which have this (fairly valuable) notion are Andrew and Slate. Andrew is built with _insets_, each of which has some interesting type, such as text, bitmap, drawing, animation, message, spreadsheet, etc. The notion of arbitrary recursive embedding is present, so that an inset of any kind can be embedded in any other kind which supports embedding. For example, an inset can be embedded at any point in the text of the text widget, or in any rectangular area in the drawing widget, or in any cell of the spreadsheet.
   </blockquote>
 
   <p>“Andrew” is a reference to the <a href="">Andrew User Interface System</a> (although at that time it was simply known as the <a href="">Andrew Project</a>).
 
-  <p>Meanwhile, <a href=""><cite>Thomas Fine</cite> had a different idea</a>:
+  <p>Meanwhile, <a href="">Thomas Fine had a different idea</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>Here’s my opinion. The best way to do images in WWW is by using MIME. I’m sure postscript is already a supported subtype in MIME, and it deals very nicely with mixing text and graphics.
   <p>But it isn’t clickable, you say? Yes your right. I suspect there is already an answer to this in display postscript. Even if there isn’t the addition to standard postscript is trivial. Define an anchor command which specifies the URL and uses the current path as a closed region for the button. Since postscript deals so well with paths, this makes arbitrary button shapes trivial.
   </blockquote>
@@ -213,9 +214,9 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>This proposal was never implemented, but the idea that the best way to fix HTML is to replace it with something else altogether <a href="">still pops up from time to time</a>.
 
-  <p><a href=""><cite>Tim Berners-Lee</cite>, March 2, 1993</a>:
+  <p><a href="">Tim Berners-Lee, March 2, 1993</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>HTTP2 allows a document to contain any type which the user has said he can handle, not just registered MIME types. So one can experiment. Yes I think there is a case for postscript with hypertext. I don’t know whether display postcript has enough. I know Adobe are trying to establish their own postscript-based “PDF” which will have links, and be readable by their proprietory brand of viewers.
   <p>I thought that a generic overlaying language for anchors (Hytime based?) would allow the hypertext and the graphics/video standards to evolve separately, which would help both.
   <p>Let the <code>IMG</code> tag be <code>INCLUDE</code> and let it refer to an arbitrary document type. Or <code>EMBED</code> if <code>INCLUDE</code> sounds like a cpp include which people will expect to provide SGML source code to be parsed inline — not what was intended.
@@ -227,7 +228,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>Finally, on March 12, 1993, <a href="">Marc Andreessen revisited the thread</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>Back to the inlined image thread again — I’m getting close to releasing Mosaic v0.10, which will support inlined GIF and XBM images/bitmaps, as mentioned previously. …
   <p>We’re not prepared to support <code>INCLUDE</code>/<code>EMBED</code> at this point. … So we’re probably going to go with <code>&lt;IMG SRC="url"&gt;</code> (not <code>ICON</code>, since not all inlined images can be meaningfully called icons). For the time being, inlined images won’t be explicitly content-type’d; down the road, we plan to support that (along with the general adaptation of MIME). Actually, the image reading routines we’re currently using figure out the image format on the fly, so the filename extension won’t even be significant.
   </blockquote>
@@ -264,7 +265,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>In December 1997, the World Wide Web Consortium (W3C) published <a href="">HTML 4.0</a> and promptly shut down the HTML Working Group. Less than two months later, a separate W3C Working Group published <a href="">XML 1.0</a>. A mere three months after that, the people who ran the W3C held a workshop called “<a href="">Shaping the Future of XML</a>” to answer the question, “Has W3C given up on HTML?” This was their answer:
 
-  <blockquote cite="">
+  <blockquote>
   <p>In discussions, it was agreed that further extending HTML 4.0 would be difficult, as would converting 4.0 to be an XML application. The proposed way to break free of these restrictions is to make a fresh start with the next generation of HTML based upon a suite of XML tag-sets.
   </blockquote>
 
@@ -272,7 +273,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>Their next target was web forms. In August 1999, the same HTML Working Group published a first draft of <a href="">XHTML Extended Forms</a>. They set the expectations <a href="">in the first paragraph</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>After careful consideration, the HTML Working Group has decided that the goals for the next generation of forms are incompatible with preserving backwards compatibility with browsers designed for earlier versions of HTML. It is our objective to provide a clean new forms model (“XHTML Extended Forms”) based on a set of well-defined requirements. The requirements described in this document are based on experience with a very broad spectrum of form applications.
   </blockquote>
 
@@ -306,7 +307,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>In June 2004, the W3C held the <a href="">Workshop on Web Applications and Compound Documents</a>. Present at this workshop were representatives of three browser vendors, web development companies, and other W3C members. A group of interested parties, including the Mozilla Foundation and Opera Software, gave a presentation on their competing vision of the future of the web: <a href="">an evolution of the existing HTML 4 standard to include new features for modern web application developers</a>.
 
-  <blockquote cite="">
+  <blockquote>
   <p>The following seven principles represent what we believe to be the most critical requirements for this work.
   <dl>
   <dt>Backwards compatibility, clear migration path</dt>
@@ -343,7 +344,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>What the heck is the WHAT Working Group? I’ll let them <a href="">explain it for themselves</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>The Web Hypertext Applications Technology Working Group is a loose, unofficial, and open collaboration of Web browser manufacturers and interested parties. The group aims to develop specifications based on HTML and related technologies to ease the deployment of interoperable Web Applications, with the intention of submitting the results to a standards organisation. This submission would then form the basis of work on formally extending HTML in the standards track.
 
   <p>The creation of this forum follows from several months of work by private e-mail on specifications for such technologies. The main focus up to this point has been extending HTML4 Forms to support features requested by authors, without breaking backwards compatibility with existing content. This group was created to ensure that future development of these specifications will be completely open, through a publicly-archived, open mailing list.
@@ -367,7 +368,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>For two and a half years, the W3C and the WHAT Working Group largely ignored each other. While the WHAT Working Group focused on web forms and new HTML features, the W3C HTML Working Group was busy with version 2.0 of XHTML. But by October 2006, it was clear that the WHAT Working Group had picked up serious momentum, while XHTML 2 was still languishing in draft form, unimplemented by any major browser. In October 2006, Tim Berners-Lee, the founder of the W3C itself, <a href="">announced that the W3C would work together with the WHAT Working Group</a> to evolve HTML.
 
-  <blockquote cite="">
+  <blockquote>
   <p>Some things are clearer with hindsight of several years. It is necessary to evolve HTML incrementally. The attempt to get the world to switch to XML, including quotes around attribute values and slashes in empty tags and namespaces all at once didn’t work. The large HTML-generating public did not move, largely because the browsers didn’t complain. Some large communities did shift and are enjoying the fruits of well-formed systems, but not all. It is important to maintain HTML incrementally, as well as continuing a transition to well-formed world, and developing more power in that world.
   <p>The plan is to charter a completely new HTML group. Unlike the previous one, this one will be chartered to do incremental improvements to HTML, as also in parallel xHTML. It will have a different chair and staff contact. It will work on HTML and xHTML together. We have strong support for this group, from many people we have talked to, including browser makers.
   <p>There will also be work on forms. This is a complex area, as existing HTML forms and XForms are both form languages. HTML forms are ubiquitously deployed, and there are many implementations and users of XForms. Meanwhile, the Webforms submission has suggested sensible extensions to HTML forms. The plan is, informed by Webforms, to extend HTML forms.
@@ -381,7 +382,7 @@ PRESENT	 Present this whenever the source document is presented</pre>
 
   <p>In October 2009, the W3C <a href="">shut down the XHTML 2 Working Group</a> and <a href="">issued this statement to explain their decision</a>:
 
-  <blockquote cite="">
+  <blockquote>
   <p>When W3C announced the HTML and XHTML 2 Working Groups in March 2007, we indicated that we would continue to monitor the market for XHTML 2. W3C recognizes the importance of a clear signal to the community about the future of HTML.
   <p>While we recognize the value of the XHTML 2 Working Group’s contributions over the years, after discussion with the participants, W3C management has decided to allow the Working Group’s charter to expire at the end of 2009 and not to renew it.
   </blockquote>
