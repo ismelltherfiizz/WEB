@@ -1,0 +1,42 @@
+
+body{
+      font-family: Arial;
+}
+p{
+  font-size: large;
+  padding: 1em;
+}
+h1{
+  text-align: center;
+}
+ul.main_menu{
+      padding-left: 0;
+
+}
+
+ul.main_menu li{
+
+    font-size: 30px;
+      display: inline;
+
+      border: 2px solid FireBrick;
+      padding: 0.5em;
+      background: #253d68;
+}
+
+nav.main_menu{
+  margin: 0;
+      height: auto;
+}
+
+footer{
+  border-top: solid #f00000;
+  min-height: 350px;
+  background:#172030   url(sponsors.png) bottom center;
+  margin-bottom: 0;
+}
+
+a{
+color: white;
+text-decoration: none;
+}
