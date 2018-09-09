@@ -1,13 +1,20 @@
 
 body{
+    background: #f0eff9;
       font-family: Arial;
+      text-shadow: 0 0 1px #667;
+
 }
 p{
   font-size: large;
   padding: 1em;
 }
 h1{
+  color:#f0eff9;
   text-align: center;
+  border: solid #f00000;
+  background: #172030;
+
 }
 ul.main_menu{
       padding-left: 0;
@@ -19,9 +26,9 @@ ul.main_menu li{
     font-size: 30px;
       display: inline;
 
-      border: 2px solid FireBrick;
+
       padding: 0.5em;
-      background: #253d68;
+      background: #f00000;
 }
 
 nav.main_menu{
@@ -37,6 +44,6 @@ footer{
 }
 
 a{
-color: white;
+color: #f0eff9;
 text-decoration: none;
 }
