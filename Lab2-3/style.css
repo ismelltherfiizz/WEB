@@ -23,30 +23,21 @@ h2{
 
 
 }
-ul.main_menu{
-      padding-left: 0;
-      position: fixed;
-      width: 1425px;
-}
+
 
 li:hover ul.submenu{
   opacity: 1;
 }
 ul.main_menu li{
 
-    font-size: 30px;
-      display: inline;
+    font-size: 10px;
 
 
-      padding: 0.5em;
       background: #f00000;
-      transition-property: background-color, color;
-transition-duration: 3s;
-transition-delay: 0s, 1s;
-transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear;
+
 }
 ul.main_menu li:hover{
-  background: FireBrick;
+  background: Black;
 }
 ul.submenu{
   padding-top:0.4em;
@@ -74,7 +65,7 @@ footer{
 
   border-top: solid #f00000;
   min-height: 350px;
-  background:#172030   url(sponsors.png) bottom center;
+  background:#172030   url(sponsors.png) bottom center no-repeat;
   margin-bottom: 0;
 }
 
@@ -97,6 +88,7 @@ img.logo_a{
   animation-duration: 1s;
   animation-name: changescale;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 img.logo{
   margin-right:1em;

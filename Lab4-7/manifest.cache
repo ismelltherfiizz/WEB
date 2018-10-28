@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# 2010-06-18:v2
+
+CACHE:
+index.html
+contacts.html
+error.html
+news.html
+style.css
+bootstrap.css
+
+NETWORK:
+
+
+FALLBACK:
+admin.html/error.html
