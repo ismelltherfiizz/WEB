@@ -12,7 +12,8 @@ clickButton.onclick = function getText() {
         input.style.border = '1px solid red'
 
     } else {
-
+      if (isOnline()) {
+          console.log('is online');
         //selecting root element
         var newDiv = document.createElement('div');
         newDiv.className = 'appeal';
@@ -57,8 +58,44 @@ clickButton.onclick = function getText() {
 
 
         commentSection.appendChild(newDiv);
-
+      } else {
+          console.log('save data');
+          saveData(fanCommentText);
+      };
         input.value = '';
         input.style.border = '1px solid black'
     };
 };
+function saveData(obj) {
+    console.log('save data inside');
+    localStorage.setItem('comments', JSON.stringify(obj));
+    var retrievedObject = JSON.parse(localStorage.getItem('comments'));
+    console.log('saved to local storage');
+    console.log('comments: ', retrievedObject);
+};
+
+function sendToServer(obj) {
+    console.log(obj + ' saved in server!');
+};
+
+window.addEventListener('load', function() {
+
+    function updateOnlineStatus(event) {
+        // add logic
+        if (event.type === 'online') {
+            if (localStorage.getItem('comments') === null) {
+                console.log('no item to load')
+            } else {
+                var unsavedItem = localStorage.getItem('comments');
+                populateComment(unsavedItem);
+                sendToServer(unsavedItem)
+                localStorage.removeItem('comments')
+            }
+        } else {
+            console.log('You are offline now!');
+        };
+    }
+
+    window.addEventListener('online',  updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+});

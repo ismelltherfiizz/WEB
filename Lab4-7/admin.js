@@ -1,14 +1,16 @@
 'use strict'
 
-
-
-
 var btn = document.getElementById('btn');
 console.log(btn);
 var title = document.getElementById('title');
 console.log(title);
 let newsBody = document.getElementById('news');
 console.log(newsBody);
+
+console.log('this is admin');
+
+
+
 
 btn.onclick = function submitNews() {
     if (title.value != '' &&

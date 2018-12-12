@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# 23-01-2015 v0.1
+/style.css
+/bootstrap.css
+/logo.png
+/news.html
+/error.html
+/index.html
+
+
+NETWORK:
+*
+
+FALLBACK:
+*.html/error.html
