@@ -123,25 +123,3 @@ function deleteItem(key) {
         return indexedDBProvider.deleteObj(key);
     }
 }
-
-
-// function deleteAllItems() {
-//     for (var i = 0; i < InitLS.length; i++) {
-//         var key = InitLS.key(i);
-//         InitLS.removeItem(key);
-//     }
-// }
-//
-// function getAllItems() {
-//     var array = [];
-//     var obj = {};
-//     for (var i = 0; i < InitLS.length; i++) {
-//         var key = InitLS.key(i);
-//         var item = JSON.parse(InitLS[key]);
-//         obj.key = key;
-//         obj.item = item;
-//         array.push(obj);
-//     }
-//     return array;
-//
-// }

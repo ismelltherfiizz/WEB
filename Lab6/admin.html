@@ -1,0 +1,86 @@
+<html>
+
+<meta charset=utf-8>
+
+<head>
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.js"></script>
+  <script src="bootstrap.js"></script>
+
+
+
+  <title>Arsenal - Admin</title>
+
+</head>
+
+<body>
+  <!бургер-->
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+      <span class="sr-only"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+      </div>
+
+      <!—меню-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav main_menu">
+          <li><a href="index.html" >Main</a></li>
+          <li class="dropdown">
+            <a href="/" class="dropdown-toggle" data-toggle="dropdown">Matches<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+
+              <li><a href="matches.html">Calendar of matches</a></li>
+              <li><a href="">Next game</a></li>
+              <li>
+                <a href="">Ratings</a>
+              </li>
+
+            </ul>
+          </li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="fans.html">Fans</a></li>
+          <li><a href="contacts.html ">Contacts</a></li>
+          <li class="active"><a href="admin.html ">Admin</a></li>
+          <li style="float:right; border: 0; padding-top:0; padding-right:1em;background:0">
+            <a href="https://www.arsenal.com/">
+        <img class="logo_a" src = "logo.png" height = "100"  />
+        </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1>Add news</h1>
+
+  <main class="container">
+    <div style="width:300px">
+
+        <img class="img-responsive" src="image.png" />
+        <input  class="centered" type="file"  value="Add image" accept="image/*" id="upload">
+
+        <textarea class= "form-control" id="title" name="comment" cols="20" rows="1"></textarea>
+
+
+        <textarea class= "form-control" id="news" name="comment" cols="20" rows="4"></textarea>
+            <input type="submit" id="btn" value="Add news" />
+
+      </div>
+
+
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+<footer>
+
+</footer>

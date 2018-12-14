@@ -1,0 +1,108 @@
+
+body{
+    background: #f0eff9;
+      font-family: Arial;
+      text-shadow: 0 0 1px #667;
+
+}
+p{
+  font-size: large;
+  padding: 1em;
+
+}
+h1{
+  color:#f0eff9;
+  text-align: center;
+  border: solid #f00000;
+  background: #172030;
+
+
+}
+h2{
+  display: inline;
+
+
+}
+
+
+li:hover ul.submenu{
+  opacity: 1;
+}
+ul.main_menu li{
+
+    font-size: 10px;
+
+
+      background: #f00000;
+
+}
+ul.main_menu li:hover{
+  background: Black;
+}
+ul.submenu{
+  padding-top:0.4em;
+  padding-left:3.4em;
+  position: fixed;
+  opacity:0;
+  transition: 0.5s linear;
+}
+
+ul.submenu li{
+    display:block;
+    font-size: 30px;
+    border: 1px solid black;
+      padding: 0.5em;
+      background: #f00000;
+}
+
+
+nav.main_menu{
+  margin: 0;
+      height: auto;
+}
+
+footer{
+
+  border-top: solid #f00000;
+  min-height: 350px;
+  background:#172030   url(sponsors.png) bottom center no-repeat;
+  margin-bottom: 0;
+}
+
+a{
+color: #f0eff9;
+text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+@keyframes changescale{
+    from{
+      height: 100px;
+    }
+    to{
+      height: 150px;
+    }
+}
+img.logo_a{
+  animation-duration: 1s;
+  animation-name: changescale;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+img.logo{
+  margin-right:1em;
+  transition: 0.5s linear;
+  background:0;
+}
+img.logo:hover{
+  transform: scale(1.1);
+}
+
+img.map{
+  float:right; margin-right:5em; margin-top:1em;   transition: 0.5s linear;
+
+}
+img.map:hover{
+  transform: scale(1.05);
+}
